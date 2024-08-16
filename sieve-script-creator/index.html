@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="index.js"></script>
+    <script type="module" src="./material.js"></script>
+    <title>Sieve Script Creator</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Georgia, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+    <body style="background-color: #c40d12; color:white">
+        <center>
+            <h1 style="padding-bottom:5px">Sieve Script Creator</h1>
+            <p id="fehler"></p>
+            <p style="padding-bottom:15px">Ein Sieve Skript sortiert automatisch deine Emails.</p>
+            <p>Dieser Skript:</p>
+            <p>-Markiert Emails vom Sekretariat, der Schulleitung und den Schülersprechern.</p>
+            <p>-Blockt Emails größer als 10MB</p>
+            <p>-Löscht phishing Mails</p>
+            <p style="padding-bottom:15px">-Markiert Emails von deiner Klassenleitung</p>
+            <p>Email von der 1. Klassenleitung</p>
+            <input name="input1" type="text" maxlength="512" id="email1" /><br />
+            <p>Email von der 2. Klassenleitung</p>
+            <input name="input1" type="text" maxlength="512" id="email2" /><br />
+            <button id="generate_code" type="button" onclick="show_code()">Code generieren</button>
+            <h2 id="code_title" style="padding-top:60px; padding-bottom:10px"></h2>
+            <md-filled-button>Next</md-filled-button>
+        </center>
+        <p id="code" style="padding:0px"></p>
+    </body>
+</html>
