@@ -6,7 +6,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $message = htmlspecialchars($_POST['message']);
 
     // Define email parameters
-    $to = "your-email@example.com"; // Your email address
+    $to = "tarondahn@hotmail.com"; // Your email address
     $subject = "New message from " . $name;
     $body = "Name: $name\nEmail: $email\n\nMessage:\n$message";
     $headers = "From: $email";
