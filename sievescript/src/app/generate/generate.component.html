@@ -1,0 +1,60 @@
+<div class="page">
+  <mat-label class="subtitle">Was macht ein Sieve Skript?</mat-label>
+  <p>
+    Kurz gesagt sortiert ein Sieve Skript Deine Emails.<br />
+  </p>
+  <mat-list>
+    Dieser Sieve Skript:
+    <mat-list-item>Markiert Emails wichtiger Kontakte</mat-list-item>
+    <mat-list-item>Blockt Emails größer als {{ value }}MB</mat-list-item>
+    <mat-list-item>Löscht Emails welche bestimmte Worte enthalten</mat-list-item>
+  </mat-list>
+
+  <div class="new-section"></div>
+  <mat-label class="subtitle">Wie generiere ich einen Sieve Skript?</mat-label>
+  <p>
+    Unser Tool kann Dir helfen, ganz leicht einen Sieve Skript zu erstellen.<br />
+    Gib einfach die Email Adressen Deiner Klassenleitung ein und der Sieve Skript wird runtergeladen.
+  </p>
+  <div class="sub-section"></div>
+  <mat-label>Welche Emails sollen markiert werden?</mat-label>
+  <div class="newline"></div>
+  <mat-slide-toggle [(ngModel)]="EmailsSekre">Emails vom Sekretariat markieren</mat-slide-toggle>
+  <div class="newline"></div>
+  <mat-slide-toggle [(ngModel)]="EmailsSchulleitung">Emails von der Schulleitung markieren</mat-slide-toggle>
+  <div class="newline"></div>
+  <mat-slide-toggle [(ngModel)]="EmailsSchuelersprechern">Emails der Schülersprecher markieren</mat-slide-toggle>
+
+  <div class="sub-section"></div>
+  <mat-label>Welche Inhalte sollen gelöscht werden?</mat-label>
+  <div class="newline"></div>
+  <mat-slide-toggle [(ngModel)]="Gambling">Glücksspiel</mat-slide-toggle>
+  <div class="newline"></div>
+  <mat-slide-toggle [(ngModel)]="NSFW">Nicht jugendfreie Inhalte</mat-slide-toggle>
+  <div class="newline"></div>
+  <mat-slide-toggle [(ngModel)]="Spam">Spam Emails</mat-slide-toggle>
+  <div class="sub-section"></div>
+  <form class="example-form" (ngSubmit)="generateFile()">
+    <mat-label>Ab welcher Dateigröße soll eine Email abgelehnt werden?</mat-label>
+    <mat-slider class="example-margin"
+                [max]="50"
+                [min]="5"
+                [step]="1"
+                [discrete]=true>
+      <input matSliderThumb [(ngModel)]="value" name="value" #slider>
+    </mat-slider>
+    <div class="sub-section"></div>
+    <mat-label>Was sind die Email Adressen Deiner Klassenleitung?</mat-label>
+    <mat-form-field class="example-full-width">
+      <mat-label>Email der 1. Klassenleitung</mat-label>
+      <input matInput type="email" [(ngModel)]="inputText" name="inputText" required>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Email der 2. Klassenleitung</mat-label>
+      <input matInput type="email" [(ngModel)]="inputTextTwo" name="inputTextTwo" required>
+    </mat-form-field>
+
+    <button mat-raised-button type="submit">Skript generieren</button>
+  </form>
+</div>

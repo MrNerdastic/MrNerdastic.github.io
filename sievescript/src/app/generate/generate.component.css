@@ -1,0 +1,44 @@
+/* Change accent color for material sliders */
+:host .mat-slider .mat-slider-thumb {
+  background-color: #ff0000 !important;
+}
+
+.page {
+  margin: 2vw;
+}
+
+.new-section {
+    margin-top: 4vw;
+}
+
+.sub-section {
+  margin-top: 2vw;
+}
+
+.question {
+    font-size: 1vw;
+}
+
+.newline {
+  display: block;
+  height: 20px;
+  width: 100%;
+}
+
+:host ::ng-deep .mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-bar {
+  background-color: #49c5b6;
+}
+
+:host ::ng-deep .mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-thumb {
+  background-color: #49c5b6;
+}
+
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
